@@ -1,17 +1,4 @@
---=============================================================================================
--- Quering all the champions, teams and the engines between the years 2000-2021 
-
-SELECT 
-	d.grand_prix, 
-	d.date, 
-	d.driver_champ, 
-	t.team, 
-	t.engine
-FROM Formula1.dbo.Formula1_Drivers d
-INNER JOIN Formula1.dbo.Formula1_Teams t ON d.grand_prix = t.grand_prix AND d.date = t.date
-ORDER BY date DESC;
-
---==============================================================================================
+-==============================================================================================
 --Total wins for every engine
 
 SELECT 
